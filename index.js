@@ -19,4 +19,8 @@ mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true}, () => {
     console.log('mongodb is connected!');
 });
 
-app.listen(3107);
+const port = process.env.PORT || 3107
+
+app.listen(port, () => {
+    console.log('server connected!');
+});
