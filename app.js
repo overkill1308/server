@@ -11,11 +11,7 @@ app.use(cors())
 
 const postRoutes = require('./routes/posts');
 
-app.use('/posts', postRoutes);
-
-app.get('/', (req, res) => {
-    res.send('Hello world');
-});
+app.use('/', postRoutes);
 
 mongoose.connect(process.env.DB_CONNECTION, {useNewUrlParser: true}, () => {
     console.log('mongodb is connected!');

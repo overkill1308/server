@@ -1,15 +1,30 @@
 const mongoose = require('mongoose');
 
 const PostSchema = mongoose.Schema({
-    title: {
+    username: {
         type: String,
         required: true
     },
-    description: {
+    password: {
         type: String,
         required: true
     },
-    date: {
+    fullName: {
+        type: String,
+        required: true
+    },
+    birthDate: {
+        type: Date,
+        required: true
+    },
+    avatar: {
+        type: String,
+        required: true
+    },
+    cloudinary_id: {
+        type: String
+    },
+    dateCreate: {
         type: Date,
         default: Date.now
     },
