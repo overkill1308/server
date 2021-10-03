@@ -4,7 +4,7 @@ const cloudinary = require('../utils/cloudinary');
 const upload = require('../utils/multer');
 const router = express.Router();
 
-router.get('/getlistuser', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const posts = await Post.find();
         res.json(posts);
